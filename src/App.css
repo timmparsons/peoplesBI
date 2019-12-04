@@ -1,0 +1,14 @@
+.app-container {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.heading {
+  background: darkgray;
+  padding: 15px 0;
+  color: white;
+}
+
+.input-container {
+  padding: 15px;
+}
