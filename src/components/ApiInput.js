@@ -1,4 +1,6 @@
 import React from 'react';
+import LineGraph from './graphs/LineGraph';
+import TwoLevelPieChart from './graphs/TwoLevelPieChart';
 
 class ApiInput extends React.Component {
   constructor() {
@@ -43,6 +45,8 @@ class ApiInput extends React.Component {
             <hr />
           </div>
         )}
+        <LineGraph />
+        <TwoLevelPieChart />
       </div>
     )
   }

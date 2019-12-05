@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ApiInput from './components/ApiInput'
+import ApiInput from './components/ApiInput';
 
 class App extends React.Component {
   render() {
