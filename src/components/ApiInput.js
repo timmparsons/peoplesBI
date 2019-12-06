@@ -1,6 +1,6 @@
 import React from 'react';
 import LineGraph from './graphs/LineGraph';
-import TwoLevelPieChart from './graphs/TwoLevelPieChart';
+// import TwoLevelPieChart from './graphs/TwoLevelPieChart';
 
 class ApiInput extends React.Component {
   constructor() {
@@ -26,7 +26,6 @@ class ApiInput extends React.Component {
       this.setState({
         data: json
       })
-      console.log(json)
   })
 }
 
@@ -38,15 +37,8 @@ class ApiInput extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <button>New Search</button>
         </form>
-        {data.map((object, index) => 
-          <div key={index}>
-            <p>Venue: ${object.venue}</p>
-            <p>Effective Spread: {object.effectiveSpread}</p>
-            <hr />
-          </div>
-        )}
-        <LineGraph />
-        <TwoLevelPieChart />
+        <LineGraph mutualIndex={data}/>
+        {/* <TwoLevelPieChart/> */}
       </div>
     )
   }

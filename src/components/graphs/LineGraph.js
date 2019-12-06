@@ -28,8 +28,12 @@ const data = [
 ];
 
 export default class LineGraph extends PureComponent {
-
   render() {
+    const { mutualIndex } = this.props
+    const shareData = mutualIndex.map((item, index) => {
+      return item.effectiveSpread * 1000
+    })
+    console.log(shareData)
     return (
       <LineChart
         width={1000}

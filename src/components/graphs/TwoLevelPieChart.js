@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import {
-  PieChart, Pie, Sector, Cell,
+  PieChart, Pie,
 } from 'recharts';
 
 const data01 = [
@@ -24,6 +24,8 @@ const data02 = [
 export default class Example extends PureComponent {
 
   render() {
+    const { data } = this.props.mutualIndex;
+    console.log(data)
     return (
       <PieChart width={400} height={400}>
         <Pie data={data01} dataKey="value" cx={200} cy={200} outerRadius={60} fill="#8884d8" />
